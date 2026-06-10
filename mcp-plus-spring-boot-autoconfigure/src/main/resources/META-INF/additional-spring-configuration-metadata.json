@@ -1,0 +1,94 @@
+{
+  "groups": [
+    {
+      "name": "mcp.plus",
+      "type": "io.mcpplus.autoconfigure.properties.McpPlusProperties",
+      "sourceType": "io.mcpplus.autoconfigure.properties.McpPlusProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "mcp.plus.enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether MCP Plus auto-exposure is enabled.",
+      "defaultValue": true
+    },
+    {
+      "name": "mcp.plus.base-packages",
+      "type": "java.util.List<java.lang.String>",
+      "description": "Base packages to scan. Empty means all beans."
+    },
+    {
+      "name": "mcp.plus.bean-types",
+      "type": "io.mcpplus.autoconfigure.properties.McpPlusProperties$BeanScanType",
+      "description": "Bean types to scan: CONTROLLER, SERVICE, or ALL.",
+      "defaultValue": "ALL"
+    },
+    {
+      "name": "mcp.plus.tool-name-strategy",
+      "type": "io.mcpplus.autoconfigure.properties.McpPlusProperties$ToolNameStrategy",
+      "description": "Tool name generation strategy.",
+      "defaultValue": "CLASS_METHOD"
+    },
+    {
+      "name": "mcp.plus.description-sources",
+      "type": "java.util.List<io.mcpplus.autoconfigure.properties.McpPlusProperties$DescriptionSource>",
+      "description": "Ordered description source priority."
+    },
+    {
+      "name": "mcp.plus.javadoc-enabled",
+      "type": "java.lang.Boolean",
+      "description": "Whether to parse Javadoc at runtime.",
+      "defaultValue": false
+    },
+    {
+      "name": "mcp.plus.exclude-deprecated",
+      "type": "java.lang.Boolean",
+      "description": "Exclude @Deprecated methods.",
+      "defaultValue": true
+    },
+    {
+      "name": "mcp.plus.include-method-patterns",
+      "type": "java.util.List<java.lang.String>",
+      "description": "Method name regex patterns to include."
+    },
+    {
+      "name": "mcp.plus.server-type",
+      "type": "io.mcpplus.autoconfigure.scanner.McpServerType",
+      "description": "MCP server type override. When unset, reads spring.ai.mcp.server.type."
+    },
+    {
+      "name": "mcp.plus.exclude-method-patterns",
+      "type": "java.util.List<java.lang.String>",
+      "description": "Method name regex patterns to exclude."
+    },
+    {
+      "name": "mcp.plus.stateless",
+      "type": "java.lang.Boolean",
+      "description": "Whether MCP server runs in stateless mode. When unset, reads spring.ai.mcp.server.protocol."
+    },
+    {
+      "name": "mcp.plus.exclude-class-patterns",
+      "type": "java.util.List<java.lang.String>",
+      "description": "Fully-qualified class name regex patterns to exclude."
+    },
+    {
+      "name": "mcp.plus.duplicate-tool-name-strategy",
+      "type": "io.mcpplus.autoconfigure.scanner.DuplicateToolNameStrategy",
+      "description": "Strategy when duplicate tool names are detected.",
+      "defaultValue": "FAIL"
+    },
+    {
+      "name": "mcp.plus.debug",
+      "type": "java.lang.Boolean",
+      "description": "Log detailed filter decisions at DEBUG level.",
+      "defaultValue": false
+    },
+    {
+      "name": "mcp.plus.inheritance-dedup-strategy",
+      "type": "io.mcpplus.autoconfigure.scanner.InheritanceDedupStrategy",
+      "description": "Strategy for deduplicating methods in inheritance hierarchies.",
+      "defaultValue": "MOST_SPECIFIC"
+    }
+  ]
+}

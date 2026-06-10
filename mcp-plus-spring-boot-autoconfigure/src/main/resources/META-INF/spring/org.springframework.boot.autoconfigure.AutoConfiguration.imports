@@ -1,0 +1,2 @@
+io.mcpplus.autoconfigure.McpPlusAutoConfiguration
+io.mcpplus.autoconfigure.actuator.McpPlusActuatorAutoConfiguration
